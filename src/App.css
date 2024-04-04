@@ -15,7 +15,7 @@
   color: var(--black);    
 }
 .p-container {
-  color: #1a1a1a;
+  color: rgb(26, 26, 26);
   font-size: 18px;
   font-weight: 400;
   padding-bottom: 20px;
