@@ -6,6 +6,7 @@ import FirstForm from "../FirstForm";
 import SecondForm from "../SecondForm";
 import ScheduleInfo from "../ScheduleInfo";
 import Scheduled from "../Scheduled";
+import ScheduleCard from "../ScheduleCard";
 
 function Home() {
   return (

@@ -1,0 +1,10 @@
+.scard-container {
+  border: 0.2px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  gap: 10px;
+  align-items: flex-start;
+}

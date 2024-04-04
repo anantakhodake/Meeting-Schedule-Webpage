@@ -4,6 +4,7 @@ import logo from "./img/logo.jpg";
 import succesful from "./img/succesful.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import ScheduleCard from "./ScheduleCard";
 
 function Scheduled() {
   return (
@@ -22,6 +23,7 @@ function Scheduled() {
           Open Invitation <FontAwesomeIcon icon={faCheck} />
         </button>
       </div>
+      <ScheduleCard />
     </div>
   );
 }
