@@ -1,0 +1,15 @@
+.container-wrapper {
+  width: 60%;
+  margin: auto;
+  
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+.text-container {
+  margin-top: 40px;
+}
+
+.container {
+  width: 500px;
+}
+

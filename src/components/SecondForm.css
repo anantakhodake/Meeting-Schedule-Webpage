@@ -1,0 +1,38 @@
+.sform-main-container {
+  display: flex;
+  gap: 8rem;
+  width: 70%;
+  padding: 10px;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 300px;
+  padding: 5px;
+  height: 100vh;
+}
+
+.back-button {
+  border: 1px solid rgb(204, 201, 201);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.back-button:hover {
+  cursor: pointer;
+  background-color: rgb(218, 237, 244);
+}
+.left-icon {
+  color: var(--blue);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Css for responsive view of a webpage */

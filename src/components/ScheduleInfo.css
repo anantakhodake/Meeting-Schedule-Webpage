@@ -1,0 +1,64 @@
+.p-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 8px;
+}
+
+.name-input {
+  border-radius: 4px;
+  outline: 2px solid black;
+  padding: 10px;
+  width: 60%;
+}
+.name-input:focus {
+  outline: 2px solid skyblue;
+}
+.name-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.text-field {
+  border-radius: 4px;
+  outline: 2px solid black;
+  padding: 10px;
+  width: 80%;
+}
+
+.text-field:focus {
+  outline: 2px solid skyblue;
+}
+
+.g-btn {
+  border: 2px solid rgb(19, 154, 208);
+  border-radius: 30px;
+  padding: 3px;
+  width: 140px;
+  color: rgb(19, 154, 208);
+}
+.g-btn:hover {
+  background-color: rgb(234, 240, 242);
+  cursor: pointer;
+}
+
+.footer-a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.check-box {
+  transform: scale(1.5);
+}
+
+.footer-btn {
+  width: 140px;
+  color: white;
+  padding: 4px;
+  border-radius: 30px;
+  background-color: rgb(112, 112, 234);
+}
+.footer-btn:hover {
+  cursor: pointer;
+  background-color: darkblue;
+}
