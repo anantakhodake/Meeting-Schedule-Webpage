@@ -11,10 +11,10 @@ import ScheduleCard from "../ScheduleCard";
 function Home() {
   return (
     <div>
-      <Scheduled />
+      {/* <Scheduled /> */}
       {/* <ScheduleInfo /> */}
       {/* <SecondForm /> */}
-      {/* <FirstForm /> */}
+      <FirstForm />
     </div>
   );
 }
