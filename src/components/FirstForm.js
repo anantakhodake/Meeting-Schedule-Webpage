@@ -6,12 +6,12 @@ import { faClock } from "@fortawesome/free-solid-svg-icons";
 import DatePicker from "./DatePicker";
 function FirstForm() {
   return (
-    <div className="flex container-wrapper gap-5 items-center  justify-center p-2">
-      <div className="container p-8  w-1/2 border-r border-gray-300">
+    <div className="flex w-3/5 mx-auto gap-5 items-center rounded-md shadow-[0_5px_15px_0_rgba(0,0,0,0.15)]  justify-center p-2">
+      <div className=" p-8 w-1/2 border-r border-gray-300">
         <div className="flex justify-center items-center py-3 ">
           <img className="h-24 " src={fibre1} />
         </div>
-        <div className="text-container border-t border-gray-300 ">
+        <div className=" mt-10 border-t border-gray-300 ">
           <h1 className="text-2xl font-bold mt-6">Fibery Demo</h1>
           <div className="">
             <div className="flex justify-start items-center gap-2 py-5 ">
