@@ -7,14 +7,16 @@ import SecondForm from "../SecondForm";
 import ScheduleInfo from "../ScheduleInfo";
 import Scheduled from "../Scheduled";
 import ScheduleCard from "../ScheduleCard";
+import ShowTime from "../ShowTime";
 
 function Home() {
   return (
     <div>
-      {/* <Scheduled /> */}
+      <Scheduled />
       {/* <ScheduleInfo /> */}
       {/* <SecondForm /> */}
-      <FirstForm />
+      {/* <FirstForm /> */}
+      {/* <ShowTime /> */}
     </div>
   );
 }

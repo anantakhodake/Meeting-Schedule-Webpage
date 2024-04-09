@@ -5,25 +5,54 @@ import succesful from "./img/succesful.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import ScheduleCard from "./ScheduleCard";
+import google from "./img/google.webp";
+import Microsoft from "./img/Microsoft.png";
 
 function Scheduled() {
   return (
-    <div className="schedule-container">
-      <div className=" flex schedule-fcontainer">
-        <img className="logo-img h-20 w-20" src={logo} alt="" />
+    <div className="flex justify-center mt-11 ">
+      <div className="schedule-container flex p-3 flex-col gap-8 w-2/3 h-96 overflow-hidden overflow-y-scroll  shadow-[0_5px_15px_0_rgba(0,0,0,0.15)]">
+        <div className=" flex items-center flex-col gap-3">
+          <img className="rounded-full h-20 w-20" src={logo} alt="" />
 
-        <div className="flex gap-2 items-center">
-          <img className="h-7" src={succesful} alt="" />
-          <h1 className=" text-xl font-bold">You are Scheduled</h1>
+          <div className="flex gap-2 items-center">
+            <img className="h-7" src={succesful} alt="" />
+            <h1 className=" text-xl font-bold">You are Scheduled</h1>
+          </div>
+          <p className="p-container mt-2 ">
+            A calendar invitation has been sent to your email address.
+          </p>
+          <button className="schedule-btn p-2 text-slate-600 w-52 rounded-3xl border border-solid border-slate-700 hover:bg-sky-400">
+            Open Invitation <FontAwesomeIcon icon={faCheck} />
+          </button>
         </div>
-        <p className="p-container mt-2 ">
-          A calendar invitation has been sent to your email address.
-        </p>
-        <button className="schedule-btn">
-          Open Invitation <FontAwesomeIcon icon={faCheck} />
-        </button>
+        <ScheduleCard />
+        <div className="flex justify-center ">
+          <div className="w-4/3 flex gap-2.5  flex-col items-start p-3 pl-12 ">
+            <h1 className="font-semibold text-base">
+              Schedule your own meetings with Calendly for free
+            </h1>
+            <p className="text-slate-500 text-base font-sans">
+              Eliminate the back-and-forth emails for finding time.
+            </p>
+            <div className=" flex gap-3">
+              <button className="flex justify-center items-center rounded-3xl gap-1 w-64 border border-solid border-slate-950 p-3">
+                <img className="h-6" src={google} alt="" />
+                Sign up With Google
+              </button>
+
+              <button className="flex justify-center items-center rounded-3xl gap-1 w-64 border border-solid border-slate-950 p-3">
+                <img className="h-6" src={Microsoft} alt="" />
+                Sign up With Microsoft
+              </button>
+            </div>
+            <div className="flex justify-center px-48 ">
+              <a href="">Sign Up With Work Email</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <ScheduleCard />
+      \
     </div>
   );
 }
