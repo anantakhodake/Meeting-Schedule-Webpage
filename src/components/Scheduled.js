@@ -11,7 +11,7 @@ import Microsoft from "./img/Microsoft.png";
 function Scheduled() {
   return (
     <div className="flex justify-center mt-11 ">
-      <div className="schedule-container flex p-3 flex-col gap-8 w-2/3 h-96 overflow-hidden overflow-y-scroll  shadow-[0_5px_15px_0_rgba(0,0,0,0.15)]">
+      <div className=" flex p-3 flex-col gap-8 w-2/3 h-screen shadow-[0_5px_15px_0_rgba(0,0,0,0.15)]">
         <div className=" flex items-center flex-col gap-3">
           <img className="rounded-full h-20 w-20" src={logo} alt="" />
 
@@ -22,7 +22,7 @@ function Scheduled() {
           <p className="p-container mt-2 ">
             A calendar invitation has been sent to your email address.
           </p>
-          <button className="schedule-btn p-2 text-slate-600 w-52 rounded-3xl border border-solid border-slate-700 hover:bg-sky-400">
+          <button className="schedule-btn p-2 text-slate-600 w-52 rounded-3xl border border-solid border-slate-700 hover:bg-sky-100">
             Open Invitation <FontAwesomeIcon icon={faCheck} />
           </button>
         </div>
@@ -36,18 +36,20 @@ function Scheduled() {
               Eliminate the back-and-forth emails for finding time.
             </p>
             <div className=" flex gap-3">
-              <button className="flex justify-center items-center rounded-3xl gap-1 w-64 border border-solid border-slate-950 p-3">
+              <button className="flex justify-center items-center rounded-3xl gap-1 w-64 border border-solid border-slate-950 p-3 hover:bg-sky-100 hover:cursor-pointer">
                 <img className="h-6" src={google} alt="" />
                 Sign up With Google
               </button>
 
-              <button className="flex justify-center items-center rounded-3xl gap-1 w-64 border border-solid border-slate-950 p-3">
+              <button className="flex justify-center items-center rounded-3xl gap-1 w-64 border border-solid border-slate-950 p-3 hover:bg-sky-100 hover:cursor-pointer">
                 <img className="h-6" src={Microsoft} alt="" />
                 Sign up With Microsoft
               </button>
             </div>
             <div className="flex justify-center px-48 ">
-              <a href="">Sign Up With Work Email</a>
+              <a className="text-blue-500 text-sm mt-1 " href="">
+                Sign Up With Work Email
+              </a>
             </div>
           </div>
         </div>

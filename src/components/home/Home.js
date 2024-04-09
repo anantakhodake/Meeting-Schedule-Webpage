@@ -12,9 +12,9 @@ import ShowTime from "../ShowTime";
 function Home() {
   return (
     <div>
-      <Scheduled />
+      {/* <Scheduled /> */}
       {/* <ScheduleInfo /> */}
-      {/* <SecondForm /> */}
+      <SecondForm />
       {/* <FirstForm /> */}
       {/* <ShowTime /> */}
     </div>

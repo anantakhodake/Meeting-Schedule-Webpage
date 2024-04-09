@@ -12,12 +12,15 @@ function SecondForm() {
       <div className="rounded-md overflow-y-scroll h-screen flex gap-32  w-9/12 p-2.5 shadow-[0_5px_15px_0_rgba(0,0,0,0.15)]">
         <div className=" w-80 p-1.5 h-screen flex flex-col items-start  ">
           <div className="img-container flex items-start justify-center gap-6 p-4">
-            <button className="border border-solid rounded-full w-10 h-10 border-slate-300  ">
-              <FontAwesomeIcon className="left-icon" icon={faArrowLeft} />
+            <button className="border border-solid rounded-full w-10 h-10 border-slate-300 hover:bg-sky-100 hover:cursor-pointer  ">
+              <FontAwesomeIcon
+                className=" text-blue-700 font-bold text-lg"
+                icon={faArrowLeft}
+              />
             </button>
             <img className="h-24" src={fibre1} />
           </div>
-          <div className="sform-text-div">
+          <div className="">
             <h1 className="text-2xl font-bold mt-6">Fibery Demo</h1>
             <div className="flex justify-start items-center gap-2 py-5 ">
               <FontAwesomeIcon className="icon" icon={faClock} />
@@ -35,7 +38,7 @@ function SecondForm() {
               <h4>Indian Standard Time</h4>
             </div>
             <div>
-              <p className="p-container">
+              <p className="text-lg font-normal pb-5 text-gray-600">
                 Book a meeting with a product expert. We've helped hundreds of
                 companies overcome product management challenges.{" "}
               </p>
