@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faCalendar } from "@fortawesome/free-solid-svg-icons";
 import fibre1 from "./img/fibre1.png";
+import { format } from "date-fns";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 import ScheduleInfo from "./ScheduleInfo";
 
@@ -17,14 +18,9 @@ function SecondForm({ time, setTime, setStage }) {
   ];
   const date = new Date(time.date);
   const withAddedMinutes = date.getTime() + 45 * 60000;
-  console.log("start", date.getTime());
-  console.log("withAddedMinutes", withAddedMinutes);
   const formattedTime = new Date(withAddedMinutes);
-  // console.log("formattedTime", formattedTime);
-  const finalTime = `${formattedTime.getHours()}:${formattedTime.getMinutes()}${
-    formattedTime.getHours() > 12 ? "AM" : "PM"
-  }`;
-  // console.log("ftime", `${formattedTime.getHours()}:${formattedTime.getMinutes()}${formattedTime.getHours() > 12 ? "AM":'PM'}`);
+  const wholeDate = `${format(time.date, "PPP")}`;
+  
   return (
     <div className="flex justify-center  ">
       <div className="rounded-md overflow-y-scroll h-screen mobile:flex-col tablet:flex-col laptop:flex-row  flex gap-32  w-9/12 mobile:w-96 tablet:w-96 laptop:w-9/12 p-2.5 shadow-[0_5px_15px_0_rgba(0,0,0,0.15)]">
@@ -48,7 +44,7 @@ function SecondForm({ time, setTime, setStage }) {
               <FontAwesomeIcon icon={faCalendar} />
               <div>
                 <p>
-                  {finalTime},{weekdays[formattedTime.getDay()]}{" "}
+                  {time.time},{weekdays[formattedTime.getDay()]} {wholeDate}
                 </p>
               </div>
             </div>
@@ -63,13 +59,8 @@ function SecondForm({ time, setTime, setStage }) {
               </p>
             </div>
           </div>
-          <div className="mt-40">
-            <a href="" className="cookies">
-              Cookies
-            </a>
-          </div>
         </div>
-        <ScheduleInfo />
+        <ScheduleInfo setStage={setStage} />
       </div>
     </div>
   );

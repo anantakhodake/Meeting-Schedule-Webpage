@@ -7,7 +7,7 @@ import {
   faVideo,
 } from "@fortawesome/free-solid-svg-icons";
 
-function ScheduleCard() {
+function ScheduleCard({parsedTime}) {
   return (
     <div className="flex justify-center mt-6">
       <div className=" mobile:w-full tablet:w-1/2 laptop:w-1/2 rounded p-3 flex flex-col w-1/2 gap-3 items-start border border-solid border-gray-600">
@@ -19,7 +19,7 @@ function ScheduleCard() {
         <div className="flex items-center gap-2">
           <FontAwesomeIcon icon={faCalendar} />
           <p className="text-gray-500 font-semibold">
-            1:30pm - 2:15pm, Thursday, April 11, 2024
+            {parsedTime}
           </p>
         </div>
         <div className="flex items-center gap-2">

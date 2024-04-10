@@ -3,7 +3,6 @@ import fibre1 from "./img/fibre1.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 import DatePicker from "./DatePicker";
-import ShowTime from "./ShowTime";
 function FirstForm({ time, setTime, setStage }) {
   const [isDateSelected, setIsDateSelected] = useState(false);
   const [selectedTimeIndex, setSelectedTimeIndex] = useState(undefined);
@@ -60,11 +59,6 @@ function FirstForm({ time, setTime, setStage }) {
               companies overcome product management challenges.{" "}
             </p>
           </div>
-        </div>
-        <div className="mt-10 ">
-          <a href="" className="cookies">
-            Cookies
-          </a>
         </div>
       </div>
       <div className="w-1/2 ">

@@ -6,8 +6,13 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import ScheduleCard from "./ScheduleCard";
 import google from "./img/google.webp";
 import Microsoft from "./img/Microsoft.png";
-
-function Scheduled({time,setTime,setStage}) {
+import { format } from "date-fns";
+function Scheduled({ time, setTime, setStage }) {
+  const date = new Date(time.date);
+  const withAddedMinutes = date.getTime() + 45 * 60000;
+  const formattedTime = new Date(withAddedMinutes);
+  const wholeDate = `${format(time.date, "PPP")}`;
+  const parsedTime = `${time.time}, ${wholeDate}`;
   return (
     <div className="flex justify-center mt-11 ">
       <div className=" flex p-3 flex-col gap-8 w-2/3  shadow-[0_5px_15px_0_rgba(0,0,0,0.15)]">
@@ -25,7 +30,7 @@ function Scheduled({time,setTime,setStage}) {
             Open Invitation <FontAwesomeIcon icon={faCheck} />
           </button>
         </div>
-        <ScheduleCard />
+        <ScheduleCard parsedTime={parsedTime} />
         <div className="flex justify-center  tablet:justify-center mobile:justify-center mobile:w-full ">
           <div className="w-4/3 flex gap-2.5  flex-col items-start p-3 pl-12 ">
             <h1 className="font-semibold text-base">

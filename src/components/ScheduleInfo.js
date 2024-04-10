@@ -1,5 +1,5 @@
 import React from "react";
-function ScheduleInfo() {
+function ScheduleInfo({setStage}) {
   return (
     // This div wrap all the schedule information
     <div className="schedule-info-wrapper">
@@ -116,7 +116,7 @@ function ScheduleInfo() {
             </span>
           </p>
           {/* footer button for schedule the event */}
-          <button className="footer-btn text-white p-2 rounded-2xl bg-sky-600 w-60 hover:bg-blue-800 hover:cursor-pointer ">
+          <button onClick={()=>setStage('schedule')} className="footer-btn text-white p-2 rounded-2xl bg-sky-600 w-60 hover:bg-blue-800 hover:cursor-pointer ">
             Schedule Event
           </button>
         </div>
