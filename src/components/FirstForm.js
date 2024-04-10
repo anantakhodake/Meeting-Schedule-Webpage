@@ -6,7 +6,7 @@ import { faClock } from "@fortawesome/free-solid-svg-icons";
 import DatePicker from "./DatePicker";
 function FirstForm() {
   return (
-    <div className="  mt-10 flex w-2/3 mx-auto gap-5 items-center rounded-md shadow-[0_5px_15px_0_rgba(0,0,0,0.15)]  justify-center p-2  ">
+    <div className=" mobile:flex-col tablet:flex-col laptop:flex-row  mt-10 flex w-2/3 mx-auto gap-5 items-center rounded-md shadow-[0_5px_15px_0_rgba(0,0,0,0.15)]  justify-center p-2  ">
       <div className="p-8 border-r border-gray-300 ">
         <div className="flex justify-center items-center py-3 ">
           <img className="h-24 " src={fibre1} />
@@ -26,13 +26,13 @@ function FirstForm() {
             </p>
           </div>
         </div>
-        <div className="mt-10 tablet:mt-10 tablet:border-t tablet:border-gray-300">
+        <div className="mt-10 ">
           <a href="" className="cookies">
             Cookies
           </a>
         </div>
       </div>
-      <div className="w-1/2 tablet:w-2/3">
+      <div className="w-1/2 ">
         <DatePicker />
       </div>
     </div>

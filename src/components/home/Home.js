@@ -12,8 +12,9 @@ import ShowTime from "../ShowTime";
 function Home() {
   return (
     <div>
-      {/* <FirstForm /> */}
-      <SecondForm />
+      <FirstForm />
+      {/* <SecondForm /> */}
+      {/* <ScheduleInfo /> */}
       {/* <ShowTime /> */}
       {/* <Scheduled /> */}
       {/* <ScheduleCard /> */}

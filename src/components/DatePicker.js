@@ -25,17 +25,21 @@ const DatePicker = () => {
   const Day = selectedDay ? <p>{format(selectedDay, "PPP")}.</p> : "";
   return (
     <>
-      <h1 className="text-xl font-bold">Select Date And Time</h1>
-      <DayPicker
-        defaultMonth={new Date()}
-        fromMonth={new Date()}
-        toMonth={new Date(2024, 5, 31)}
-        disabled={disableDays}
-        mode="single"
-        selected={selectedDay}
-        onDayClick={handleDayClick}
-        footer={Day}
-      />
+      <div className="mobile:justify-center  tablet:justify-center">
+        <h1 className=" mobile:text-center tablet:text-center text-xl font-bold">
+          Select Date And Time
+        </h1>
+        <DayPicker
+          defaultMonth={new Date()}
+          fromMonth={new Date()}
+          toMonth={new Date(2024, 5, 31)}
+          disabled={disableDays}
+          mode="single"
+          selected={selectedDay}
+          onDayClick={handleDayClick}
+          footer={Day}
+        />
+      </div>
       <div className="timezone-wrapper flex justify-center items-center gap-3 p-1">
         <div className="select-wrapper flex justify-center items-center p-2 hover:bg-sky-100 hover:cursor-pointer hover:rounded-md  ">
           {/* label for timezone */}
