@@ -6,7 +6,26 @@ import fibre1 from "./img/fibre1.png";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 import ScheduleInfo from "./ScheduleInfo";
 
-function SecondForm() {
+function SecondForm({ time, setTime, setStage }) {
+  const weekdays = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+  const date = new Date(time.date);
+  const withAddedMinutes = date.getTime() + 45 * 60000;
+  console.log("start", date.getTime());
+  console.log("withAddedMinutes", withAddedMinutes);
+  const formattedTime = new Date(withAddedMinutes);
+  // console.log("formattedTime", formattedTime);
+  const finalTime = `${formattedTime.getHours()}:${formattedTime.getMinutes()}${
+    formattedTime.getHours() > 12 ? "AM" : "PM"
+  }`;
+  // console.log("ftime", `${formattedTime.getHours()}:${formattedTime.getMinutes()}${formattedTime.getHours() > 12 ? "AM":'PM'}`);
   return (
     <div className="flex justify-center  ">
       <div className="rounded-md overflow-y-scroll h-screen mobile:flex-col tablet:flex-col laptop:flex-row  flex gap-32  w-9/12 mobile:w-96 tablet:w-96 laptop:w-9/12 p-2.5 shadow-[0_5px_15px_0_rgba(0,0,0,0.15)]">
@@ -29,8 +48,9 @@ function SecondForm() {
             <div className="flex items-center gap-3">
               <FontAwesomeIcon icon={faCalendar} />
               <div>
-                <p>1:30pm - 2:30pm,Thursday</p>
-                <p>April 11,2024</p>
+                <p>
+                  {finalTime},{weekdays[formattedTime.getDay()]}{" "}
+                </p>
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 py-5 ">

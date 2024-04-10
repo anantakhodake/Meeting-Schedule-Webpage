@@ -5,8 +5,7 @@ import { format } from "date-fns";
 import "react-day-picker/dist/style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEarthAmerica } from "@fortawesome/free-solid-svg-icons";
-const DatePicker = () => {
-  const [selectedDay, setSelectedDay] = useState(new Date());
+const DatePicker = ({ setIsDateSelected, selectedDay, setSelectedDay }) => {
   const disableDays = [
     new Date(2024, 3, 13),
     new Date(2024, 3, 14),
@@ -16,13 +15,12 @@ const DatePicker = () => {
     new Date(2024, 3, 28),
     { from: new Date(2024, 3, 6), to: new Date(2024, 3, 7) },
   ];
+  // const [selectedDay,setSelectedDay]= useState(false);
 
-  const handleDayClick = (day) => {
-    setSelectedDay(day);
-  };
   const Timezone = Intl.supportedValuesOf("timeZone");
-  console.log(Timezone);
+
   const Day = selectedDay ? <p>{format(selectedDay, "PPP")}.</p> : "";
+
   return (
     <>
       <div className="mobile:justify-center  tablet:justify-center">
@@ -36,8 +34,11 @@ const DatePicker = () => {
           disabled={disableDays}
           mode="single"
           selected={selectedDay}
-          onDayClick={handleDayClick}
+          onSelect={setSelectedDay}
           footer={Day}
+          onDayClick={(e) => {
+            setIsDateSelected(true);
+          }}
         />
       </div>
       <div className="timezone-wrapper flex justify-center items-center gap-3 p-1">
@@ -46,11 +47,11 @@ const DatePicker = () => {
           {/* <label className="font-bold">Time Zone:-</label> */}
           <FontAwesomeIcon icon={faEarthAmerica} />
           <select
-            className="select-timezone outline-none hover:bg-sky-100 hover:cursor-pointer"
+            className="select-timezone w-96 outline-none hover:bg-sky-100 hover:cursor-pointer"
             id="id"
           >
             {Timezone.map((string, id) => {
-              return <option>{string}</option>;
+              return <option key={`test-${id}`}>{string}</option>;
             })}
           </select>
         </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import "./Scheduled.css";
 import logo from "./img/logo.jpg";
 import succesful from "./img/succesful.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,7 +7,7 @@ import ScheduleCard from "./ScheduleCard";
 import google from "./img/google.webp";
 import Microsoft from "./img/Microsoft.png";
 
-function Scheduled() {
+function Scheduled({time,setTime,setStage}) {
   return (
     <div className="flex justify-center mt-11 ">
       <div className=" flex p-3 flex-col gap-8 w-2/3  shadow-[0_5px_15px_0_rgba(0,0,0,0.15)]">

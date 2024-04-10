@@ -1,6 +1,4 @@
 import React from "react";
-import "./ScheduleInfo.css";
-
 function ScheduleInfo() {
   return (
     // This div wrap all the schedule information
