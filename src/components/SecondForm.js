@@ -9,16 +9,16 @@ import ScheduleInfo from "./ScheduleInfo";
 function SecondForm() {
   return (
     <div className="flex justify-center">
-      <div className="rounded-md overflow-y-scroll h-screen flex gap-32  w-9/12 p-2.5 shadow-[0_5px_15px_0_rgba(0,0,0,0.15)]">
+      <div className="rounded-md overflow-y-scroll h-screen mobile:flex-col tablet:flex-col laptop:flex-row flex gap-32  w-9/12 p-2.5 shadow-[0_5px_15px_0_rgba(0,0,0,0.15)]">
         <div className=" w-80 p-1.5 h-screen flex flex-col items-start  ">
-          <div className="img-container flex items-start justify-center gap-6 p-4">
-            <button className="border border-solid rounded-full w-10 h-10 border-slate-300 hover:bg-sky-100 hover:cursor-pointer  ">
+          <div className="img-container  flex items-start justify-center gap-6 p-4">
+            <button className="border border-solid  rounded-full w-10 h-10 border-slate-300 hover:bg-sky-100 hover:cursor-pointer  ">
               <FontAwesomeIcon
                 className=" text-blue-700 font-bold text-lg"
                 icon={faArrowLeft}
               />
             </button>
-            <img className="h-24" src={fibre1} />
+            <img className="h-24 " src={fibre1} />
           </div>
           <div className="">
             <h1 className="text-2xl font-bold mt-6">Fibery Demo</h1>

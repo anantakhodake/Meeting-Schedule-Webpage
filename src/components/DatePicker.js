@@ -37,11 +37,14 @@ const DatePicker = () => {
         footer={Day}
       />
       <div className="timezone-wrapper flex justify-center items-center gap-3 p-1">
-        <div className="select-wrapper flex justify-center items-center p-2  ">
+        <div className="select-wrapper flex justify-center items-center p-2 hover:bg-sky-100 hover:cursor-pointer hover:rounded-md  ">
           {/* label for timezone */}
           {/* <label className="font-bold">Time Zone:-</label> */}
           <FontAwesomeIcon icon={faEarthAmerica} />
-          <select className="select-timezone outline-none " id="id">
+          <select
+            className="select-timezone outline-none hover:bg-sky-100 hover:cursor-pointer"
+            id="id"
+          >
             {Timezone.map((string, id) => {
               return <option>{string}</option>;
             })}
