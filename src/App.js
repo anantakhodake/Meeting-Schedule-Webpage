@@ -1,12 +1,7 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Home from "./components/home/Home";
 import FirstForm from "./components/FirstForm";
 import SecondForm from "./components/SecondForm";
-import ScheduleInfo from "./components/ScheduleInfo";
-import ShowTime from "./components/ShowTime";
 import Scheduled from "./components/Scheduled";
-import ScheduleCard from "./components/ScheduleCard";
 import { useState } from "react";
 
 function App() {

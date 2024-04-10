@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./ShowTime.css";
 
 function ShowTime({ time, setTime }) {
   const [selectedTimeIndex, setSelectedTimeIndex] = useState(undefined);

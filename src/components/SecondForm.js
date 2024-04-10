@@ -1,5 +1,4 @@
 import React from "react";
-import "./SecondForm.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faCalendar } from "@fortawesome/free-solid-svg-icons";
 import fibre1 from "./img/fibre1.png";

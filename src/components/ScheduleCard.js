@@ -1,5 +1,4 @@
 import React from "react";
-import "./ScheduleCard.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCalendar,
